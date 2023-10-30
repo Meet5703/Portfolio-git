@@ -4,262 +4,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./assets/SnQiwbFwUvfSEPy.webp">
-    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        .bg-move {
-            height: 10vh;
-            font-weight: bold;
-            position: relative;
-            animation: nav-bar 4s ease-in-out;
-        }
-
-        @keyframes nav-bar {
-            from { height: 0vh; }
-            to { height: 10vh; }
-        }
-
-        .nav-link {
-            text-decoration: none;
-            color: inherit;
-            position: relative;
-            display: inline-block;
-            margin: 0 1rem; /* Adjust the margin for spacing */
-            opacity: 0;
-        }
-
-        .nav-link::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 0;
-            border-bottom: 4px solid rgb(0, 253, 253); /* Change the color as needed */
-            transition: width 0.3s ease-in-out;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-            animation: link-hover 0.3s ease-in-out;
-        }
-
-        .font-shadow:hover {
-            text-shadow: 0 0 6px rgb(4, 58, 255);
-            animation: text-shadow-hover 0.3s ease-in-out;
-        }
-
-        /* Staggered animation for links */
-        .nav-link:nth-child(1) { animation: fadeIn 0.5s ease 1s forwards, bounce 1s 1; }
-        .nav-link:nth-child(2) { animation: fadeIn 0.5s ease 1.2s forwards, bounce 1s 2; }
-        .nav-link:nth-child(3) { animation: fadeIn 0.5s ease 1.4s forwards, bounce 1s 3; }
-        .nav-link:nth-child(4) { animation: fadeIn 0.5s ease 1.6s forwards, bounce 1s 4; }
-        .nav-link:nth-child(5) { animation: fadeIn 0.5s ease 1.8s forwards, bounce 1s 5; }
-
-        @keyframes fadeIn {
-            to { opacity: 1; }
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-30px);
-            }
-            60% {
-                transform: translateY(-15px);
-            }
-        }
-
-        .imginit {
-            animation: img-appear 3s;
-        }
-
-        @keyframes img-appear {
-            0% { opacity: 0; transform: translateX(80px); }
-            100% { opacity: 1; transform: translateX(0); }
-        }
-
-
-
-
-
-        .wrapper{
-        display: flex;
-        
-        }
-        .wrapper .static-txt{
-        color: #fff;
-        font-size: 60px;
-        font-weight: 400;
-        }
-        .wrapper .dynamic-txts{
-        margin-left: 15px;
-        height: 90px;
-        line-height: 90px;
-        overflow: hidden;
-        }
-        .dynamic-txts li{
-        list-style: none;
-        color: #FC6D6D;
-        font-size: 60px;
-        font-weight: 500;
-        position: relative;
-        top: 0;
-        animation: slide 12s steps(4) infinite;
-        }
-        @keyframes slide {
-        100%{
-            top: -360px;
-        }
-        }
-        .dynamic-txts li span{
-        position: relative;
-        margin: 5px 0;
-        line-height: 90px;
-        }
-        .dynamic-txts li span::after{
-        content: "";
-        position: absolute;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        background: #343F4F;
-        border-left: 2px solid #FC6D6D;
-        animation: typing 3s steps(10) infinite;
-        }
-        @keyframes typing {
-        40%, 60%{
-            left: calc(100% + 30px);
-        }
-        100%{
-            left: 0;
-        }
-        }
-
-
-
-
-
-
-
-
-
-        .imginit-animate {
-            animation: img-appear 4s;
-        }
-
-        .vertical-bounce {
-            animation: bounce 6s;
-        }
-
-        @keyframes img-appear {
-            0% { opacity: 0; transform: translateX(80px); }
-            100% { opacity: 1; transform: translateX(0); }
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-30px);
-            }
-            60% {
-                transform: translateY(-15px);
-            }
-        }
-
-
-
-
-
-
-
-
-        .social-icons {
-            display: flex;
-            align-items: center;
-            margin-top: 20px;
-        }
-
-        .icon-link {
-            font-size: 24px;
-            margin-right: 20px;
-        }
-
-
-
-
-
-
-        @media (max-width: 640px) {
-
-            .wrapper{
-                margin-top: 20%;
-                font-size: 15px;
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: center;
-            }
-            body {
-                width: 100%; 
-            }
-            .mypic {
-                margin-top: 20%;
-                margin-left: 20%; 
-                width: 60%; 
-            }
-            .wrapper .static-txt {
-                font-size: 30px;
-            }
-            .dynamic-txts li {
-                font-size: 40px;
-            }
-            .bg-move {
-                height: 5vh; 
-            }
-            .nav-link {
-                margin: 0 0.5rem; 
-            }
-        }
-
-    </style>
+    <link rel="stylesheet" href="customstyle.css">
     <title>Meet Khetani</title>
 </head>
-<body style="background-image: url(https://wallpapers.com/images/hd/dark-mountain-4k-3vxidfa2y5t5uk4m.jpg);
-                background-attachment: fixed;" class="bg-cover">
-    <div class="bg-white bg-opacity-25 w-screen h-screen">
-        <div>
-            <nav>
-                <div class=" md:text-xl bg-move w-full flex justify-center items-center bg-gradient-to-br from-teal-500 via-sky-200 to-indigo-400 p-5">
-                    <ul class="flex flex-wrap justify-center items-center mt-4 rounded-lg">
-                        <li><a class="nav-link hover:text-teal-200 font-shadow" href="#">Home</a></li>
-                        <li><a class="nav-link hover:text-teal-200 font-shadow" href="#">About me</a></li>
-                        <li><a class="nav-link hover:text-teal-200 font-shadow" href="#">Portfolio</a></li>
-                        <li><a class="nav-link hover:text-teal-200 font-shadow" href="#">Skills</a></li>
-                        <li><a class="nav-link hover:text-teal-200 font-shadow" href="#">Contact</a></li>
+<body>
+    <div  style="background-image: url(https://wallpapers.com/images/hd/dark-mountain-4k-3vxidfa2y5t5uk4m.jpg); background-repeat: no-repeat;"  class="bg-cover bg-fixed">
+        <div class="bg-white bg-opacity-25 w-screen h-screen">
+            <div>
+                <nav class="fixed w-full z-10">
+                    <div class="md:text-xl bg-move w-full flex justify-center items-center bg-gradient-to-br from-teal-500 via-sky-200 to-indigo-400 p-5">
+                        <ul class="flex flex-wrap justify-center items-center mt-4 rounded-lg">
+                            <li><a class="nav-link hover:text-teal-200 font-shadow" href="#">Home</a></li>
+                            <li><a class="nav-link hover:text-teal-200 font-shadow" href="#aboutme">About me</a></li>
+                            <li><a class="nav-link hover:text-teal-200 font-shadow" href="#">Portfolio</a></li>
+                            <li><a class="nav-link hover:text-teal-200 font-shadow" href="#Skills">Skills</a></li>
+                            <li><a class="nav-link hover:text-teal-200 font-shadow" href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="sm:flex items-center">
+                <div>
+                    <img class="mypic md:ml-12 mt-24 bounce imginit row-span-1 animate-img" src="./assets/SnQiwbFwUvfSEPy.webp" alt="1">
+                </div>
+                <div class="wrapper">
+                    <div class="static-txt">I'm</div>
+                    <ul class="dynamic-txts">
+                        <li><span>Meet Khetani</span></li>
+                        <li><span>a web-dev</span></li>
+                        <li><span>a student</span></li>
+                        <li><span>learning at pw-skills</span></li>
                     </ul>
                 </div>
-            </nav>
-        </div>
-        <div class="sm:flex items-center">
-            <div>
-                <img class="mypic md:ml-12 mt-24 bounce imginit row-span-1 animate-img" src="./assets/SnQiwbFwUvfSEPy.webp" alt="1">
             </div>
-            <div class="wrapper">
-                <div class="static-txt">I'm</div>
-                    <ul class="dynamic-txts">
-                    <li><span>Meet Khetani</span></li>
-                    <li><span>a web-dev</span></li>
-                    <li><span>a student</span></li>
-                    <li><span>learning at pw-skills</span></li>
-                    </ul>
+            <div class="icns-m1 grid grid-cols-6 w-1/2 gap-10" style="margin-left: 33%; margin-top: -5;">
+                <a href="https://www.instagram.com/mr.meet_khetani/"><i class="fa fa-instagram text-5xl sm:items-center rounded-xl icon-link hover-fa"></i></a>
+                <a href="https://github.com/Meet5703"><i class="fa fa-github text-5xl sm:items-center rounded-xl icon-link hover-fa"></i></a>
+                <a href="https://www.linkedin.com/in/meet-khetani-a1608a297/"><i class="fa fa-linkedin text-5xl sm:items-center rounded-xl icon-link hover-fa"></i></a>
+            </div>
+        </div>
+    </div>
+    <div id="aboutme" style="background-image: url(https://wallpapers.com/images/hd/4k-minimalist-misty-mountain-pumpb5rzqjmu3rp5.jpg); background-repeat: no-repeat ; background-size: cover; " class=" text-lg font-mono text-gray-300 bg-fixed mobile mobile-p" >
+        <div class="mobile-p">
+            <h1 class="text-center" style="font-size: 3vw; background-color: rgba(255, 255, 255, 0.175); backdrop-filter: blur(8px);">About ME</h1>
+            <div class="">
+                <div class="flex flex-col flex-wrap" style=" background-color: rgba(255, 255, 255, 0.056); backdrop-filter: blur(8px); border-right: 2px solid rgb(110, 61, 61); ">
+                    <p class="mt-5">
+                        Hello, I'm Meet, a web developer on a mission to master the world of web development. My journey into coding started with a passion for programming and AI back in 7th grade. Although I initially pursued a diploma in civil engineering due to family expectations, my heart was always set on becoming a software engineer. Life had other plans, but now, I'm determined to follow my passion.
+                    </p>
+                    <p class="mt-10">
+                        I'm a dedicated and hardworking individual with a knack for efficiency and time-saving techniques. If I know something, I can do it, and if I don't, I'll adapt and learn to excel at it. That's my commitment. Becoming a web developer is my dream, and I won't stop until I've achieved it.
+                    </p>
+                    <p class="mt-10">
+                        On this page, you'll find an overview of my skillset and its progression, which I've been gathering from PW-Skills. If you're interested in seeing my work, check out my portfolio section. Currently, I have assignments and projects from my educational institute, but I'm continually evolving.
+                    </p>
+                    <p class="mt-10">
+                        In the near future, I'll be adding a contact section for suggestions and collaborations. If you'd like to get in touch with me, you'll find my phone number, email, and WhatsApp contact information there.
+                    </p>
+                    <p class="mt-10">
+                        Thank you for visiting, and I look forward to connecting with you as I pursue my passion in the world of web development.
+                    </p>
+                </div>
+                <div class=" " style=" background-color: rgba(255, 255, 255, 0.056); backdrop-filter: blur(8px);">
+                    <div class="flex flex-col">
+                        <h1 class="text-center text-4xl">Education</h1>
+                        <div class="ml-12">
+                            <h4 class="text-2xl">Diploma in Civil Engineering</h4>
+                            <ul class="ml-6">
+                                <li>DSTC,GTU</li>
+                                <li>Gujrat,Junagadh</li>
+                                <li>2019-2021</li>
+                                <li>8.46CGPA With Distinction</li>
+                            </ul>
+                            <div class="float-right mobile-float" style="margin-top: -10%;">
+                                <h4 class="text-2xl">Full Stack Web Developement</h4>
+                                <ul class="ml-6">
+                                    <li>PW-Skills</li>
+                                    <li>2023-2024</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="mobile-p">
+        <div class="  w-screen h-screen bg-gradient-to-br from-80% from-gray-800 to-60% to-gray-700 bg-fixed">
+            <div id="Skills" class="grid grid-cols-6 mobile ">
+                <div class="col-span-3">
+                    <div class="text-center mt-32">
+                        <p class="text-blue-300 font-mono text-2xl dark:text-white mt-36 mobile-margin">HTML and HTML5</p>
+                    </div>
+                    <div class=" mx-auto bg-gray-200 rounded-full dark:bg-gray-700 mt-3 h-6 w-4/5">
+                        <div class="bg-blue-600 h-full text-xs flex items-center justify-center font-medium text-blue-100 p-0.5 leading-none rounded-full mobile-child" style="width: 100%;">100%</div>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-blue-300 font-mono text-2xl dark:text-white mt-16 mobile-margin">CSS and CSS3</p>
+                    </div>
+                    <div class="w-1/2 mx-auto bg-gray-200 rounded-full dark:bg-gray-700 mt-3 h-6 w-4/5">
+                        <div class="bg-blue-600 h-full text-xs flex items-center justify-center font-medium text-blue-100 p-0.5 leading-none rounded-full" style="width: 90%;">90%</div>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-blue-300 font-mono text-2xl dark:text-white mt-16 mobile-margin">JavaScript</p>
+                    </div>
+                    <div class="w-1/2 mx-auto bg-gray-200 rounded-full dark:bg-gray-700 mt-3 h-6 w-4/5">
+                        <div class="bg-blue-600 h-full text-xs flex items-center justify-center font-medium text-blue-100 p-0.5 leading-none rounded-full" style="width: 0%;">0%</div>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-blue-300 font-mono text-2xl dark:text-white mt-16 mobile-margin">React</p>
+                    </div>
+                    <div class="w-1/2 mx-auto bg-gray-200 rounded-full dark:bg-gray-700 mt-3 h-6 w-4/5">
+                        <div class="bg-blue-600 h-full text-xs flex items-center justify-center font-medium text-blue-100 p-0.5 leading-none rounded-full" style="width: 0%;">0%</div>
+                    </div>
+                </div>
+                <div class="col-span-3 mt" style="margin-top: 70px;">
+                    <div class="text-center">
+                        <p class="text-blue-300 font-mono text-2xl dark:text-white mt-16 mobile-margin">Node.js and Express</p>
+                    </div>
+                    <div class="w-1/2 mx-auto bg-gray-200 rounded-full dark:bg-gray-700 mt-3 h-6 w-4/5">
+                        <div class="bg-blue-600 h-full text-xs flex items-center justify-center font-medium text-blue-100 p-0.5 leading-none rounded-full" style="width: 0%;">0%</div>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-blue-300 font-mono text-2xl dark:text-white mt-16 mobile-margin">SQL and Databases (e.g., MySQL, MongoDB)</p>
+                    </div>
+                    <div class="w-1/2 mx-auto bg-gray-200 rounded-full dark:bg-gray-700 mt-3 h-6 w-4/5">
+                        <div class="bg-blue-600 h-full text-xs flex items-center justify-center font-medium text-blue-100 p-0.5 leading-none rounded-full" style="width: 0%;">0%</div>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-blue-300 font-mono text-2xl dark:text-white mt-16 mobile-margin">RESTful API Design</p>
+                    </div>
+                    <div class="w-1/2 mx-auto bg-gray-200 rounded-full dark:bg-gray-700 mt-3 h-6 w-4/5">
+                        <div class="bg-blue-600 h-full text-xs flex items-center justify-center font-medium text-blue-100 p-0.5 leading-none rounded-full" style="width: 0%;">0%</div>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-blue-300 font-mono text-2xl dark:text-white mt-16 mobile-margin">Git and GitHub</p>
+                    </div>
+                    <div class="w-1/2 mx-auto bg-gray-200 rounded-full dark:bg-gray-700 mt-3 h-6 w-4/5">
+                        <div class="bg-blue-600 h-full text-xs flex items-center justify-center font-medium text-blue-100 p-0.5 leading-none rounded-full" style="width: 0%;">0%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <script>
         window.addEventListener('load', function () {
             const img = document.querySelector('.imginit');
