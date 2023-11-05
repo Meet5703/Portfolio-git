@@ -35,23 +35,22 @@
 </head>
 <body class="overflow-x-hidden">
     <div id="home" class="h-screen" style="background-image: url(./assets/Animated\ Shape.svg); background-size: cover; background-attachment: fixed;">
-        <nav class="bg-purple-300 w-full h-16 px-6 flex items-center justify-between md:px-8 fixed z-10">
+        <nav class="bg-purple-300 w-full h-16 px-6 flex items-center justify-between md:px-8  z-10">
             <div>
                 <img src="./assets/photo.jpg" alt="" class="rounded-full">
             </div>
             <div class="flex md:flex-row-reverse space-x-4 items-center md:w-3/4 md:justify-between">
                 <div class="transition-transform hover:scale-110">
                     <button class="px-[4px] py-[7px] bg-gradient-to-br overflow-hidden from-purple-600 to-indigo-500 hover:text-white rounded-lg w-24">
-                        <span class="bg-purple-300 px-6 py-1 rounded hover-bg-transparent">
-                            Login
-                        </span>
+                        <span class="bg-purple-300 px-6 py-1 rounded hover-bg-transparent">Login</span>
                     </button>
                 </div>
                 <div>
                     <input type="checkbox" id="check" class="hidden">
-                    <label for "check" class="cursor-pointer md:hidden">
-                        <i id="menu-icon" class="fa fa-navicon"></i>
-                        <i id="close-icon" class="fa fa-times hidden"></i>
+                    <label for="check" class="cursor-pointer md:hidden">
+                        <!-- Add Tailwind CSS classes to style icons -->
+                        <i id="menu-icon" class="fa fa-navicon text-xl"></i>
+                        <i id="close-icon" class="fa fa-times hidden text-xl"></i>
                     </label>
                     <ul class="bg-purple-200 py-4 md:bg-transparent top-14 z-0 duration-300 nav-list w-screen absolute left-0 top-20 flex justify-center hidden md:block md:flex md:w-full md:pl-40 md:relative md:top-0 text-center space-y-6 md:space-y-0 md:space-x-9">
                         <li class="transition-transform hover:scale-110">
